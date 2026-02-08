@@ -236,10 +236,12 @@ function nextPage(){
 
 function startExperience(){
     const music = document.getElementById("bgMusic");
-    music.play().catch(()=>{ 
-        alert("Click anywhere on the page to start music"); 
+    // Ensure user interaction triggers music
+    music.play().then(()=>{
+        nextPage();
+    }).catch(()=>{
+        alert("Click anywhere on the page to start music");
     });
-    nextPage();
 }
 
 // Floating hearts
@@ -259,3 +261,4 @@ createHearts();
 
 </body>
 </html>
+
