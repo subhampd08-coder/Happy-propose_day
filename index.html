@@ -5,25 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Propose Day ❤️</title>
 <style>
+/* General Reset & Body */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{height:100vh;display:flex;justify-content:center;align-items:center;background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1a1a2e);background-size:400% 400%;animation:gradientBG 15s ease infinite;overflow:hidden;color:white;}
+
+/* Background Animation */
 @keyframes gradientBG{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+
+/* Card Style */
 .card{backdrop-filter: blur(20px);background: rgba(255,255,255,0.07);padding:50px;border-radius:25px;width:90%;max-width:850px;text-align:center;box-shadow:0 0 60px rgba(255,0,100,0.2);}
+
+/* Pages */
 .page{display:none;opacity:0;transform:translateY(30px);transition:1s;}
 .page.active{display:block;opacity:1;transform:translateY(0);}
+
+/* Text */
 h1{font-size:42px;margin-bottom:25px;color:#ff4d6d;text-shadow:0 0 25px rgba(255,77,109,0.8);}
-p{font-size:21px;line-height:1.9;opacity:0.95;min-height:90px;}
+p{font-size:21px;line-height:2;min-height:90px;}
+
+/* Buttons */
 button{margin-top:35px;padding:14px 30px;font-size:18px;border:none;border-radius:30px;background:linear-gradient(45deg,#ff4d6d,#ff1e4d);color:white;cursor:pointer;transition:0.3s;box-shadow:0 0 25px rgba(255,0,100,0.4);}
 button:hover{transform:scale(1.08);box-shadow:0 0 40px rgba(255,0,100,0.8);}
+
+/* Floating Hearts */
 .hearts{position:fixed;width:100%;height:100%;top:0;left:0;pointer-events:none;z-index:-1;}
-.hearts span{position:absolute;animation:float 8s linear infinite;}
+.hearts span{position:absolute;animation:float 8s linear infinite;font-size:20px;}
 @keyframes float{0%{transform:translateY(100vh);opacity:1;}100%{transform:translateY(-10vh);opacity:0;}}
 </style>
 </head>
 <body>
 
-<!-- Music -->
-<audio id="bgMusic" loop>
+<!-- Background Music -->
+<audio id="bgMusic" loop muted>
   <source src="song.mp3" type="audio/mpeg">
   Your browser does not support audio.
 </audio>
@@ -45,6 +58,7 @@ button:hover{transform:scale(1.08);box-shadow:0 0 40px rgba(255,0,100,0.8);}
 <div class="page" id="page4"><p></p><button onclick="nextPage()">Next ❤️</button></div>
 <div class="page" id="page5"><p></p><button onclick="nextPage()">Next ❤️</button></div>
 <div class="page" id="page6"><p></p><button onclick="nextPage()">Final ❤️</button></div>
+
 <div class="page" id="page7">
 <h1>Subham ❤️ [Ladduuuu]</h1>
 <p>Shayad maine seedha "I Love You" nahi bola…<br>Par har lafz mein tum thi,<br>Har ehsaas mein tum ho,<br>Aur har kal mein bhi sirf tum hi rahogi.</p>
@@ -54,14 +68,14 @@ button:hover{transform:scale(1.08);box-shadow:0 0 40px rgba(255,0,100,0.8);}
 </div>
 
 <script>
-// Shayari array
+// Shayari Array
 const shayari = [
-"Tmse milna meri kismat ho skti hai,<br>Tmse mohabbat ho jana mere liye sahi waqt ho skta hai,<br>Tmhara mere saath rehna meri takat hai,<br>Aur tmhara hasta hua chehra dekhna meri aadat hai.",
-"Aajkal tmse baatein thodi kam ho gayi hain,<br>Raat ko jaag kar tmhe pareshan krne wali aadat bhi chali gayi hai,<br>Sab badal gaya dheere dheere…<br>Bas meri mohabbat reh gayi,<br>Jo aaj bhi deewani hai sirf tmhari muskurahat ke pichhe.",
-"Waqt nahi mil pata milne ko, thik hai…<br>Jaha tut jaate hain lakho rishte dur hone se,<br>Waha hamara pyaar kabhi tuta nahi.<br>Ruthe zaroor honge hum ek dusre se,<br>Magar kabhi ek dusre ka haath chhoda nahi.",
-"Kitni pyaari lagti ho tum…<br>Kaun kehta hai tum zyada bolti ho?<br>Main toh tmhari har baat sunne ke liye hamesha taiyaar hoon.<br>Mujhe kabhi pareshani nahi hogi,<br>Bas yunhi muskura diya karo baatein karte hue,<br>Tab mere liye puri duniya sirf tum hi hogi.",
-"Main tmhara intezaar karne ke liye taiyaar hoon,<br>Tum mujhse pyaar karti ho — yeh kehne ki zarurat nahi.<br>Bas apna haq jatate rehna,<br>Chahe sab tumhare khilaaf ho jaayein,<br>Hum tumhare hi the… tumhare hi rahenge,<br>Aur hamesha tumhara saath dete rahenge.",
-"Hamare rishte ki rassi shayad thodi kamzor ho rahi hai,<br>Magar main use abhi bhi mazbooti se pakde baitha hoon.<br>Tum bas mera haath thaam lo,<br>Aur is rishte ko aur mazboot bana do.<br>Jis upar wale ne kabhi do ajnabi ko milaya tha,<br>Ab kiski himmat hai jo hume alag kar sake?"
+"Tmse milna meri kismat ho skti hai. Tmse mohabbat ho jana mere liye sahi waqt ho skta hai. Tmhara mere saath rehna meri takat hai. Aur tmhara hasta hua chehra dekhna meri aadat hai.",
+"Aajkal tmse baatein thodi kam ho gayi hain. Raat ko jaag kar tmhe pareshan krne wali aadat bhi chali gayi hai. Sab badal gaya dheere dheere… Bas meri mohabbat reh gayi. Jo aaj bhi deewani hai sirf tmhari muskurahat ke pichhe.",
+"Waqt nahi mil pata milne ko, thik hai… Jaha tut jaate hain lakho rishte dur hone se, Waha hamara pyaar kabhi tuta nahi. Ruthe zaroor honge hum ek dusre se, Magar kabhi ek dusre ka haath chhoda nahi.",
+"Kitni pyaari lagti ho tum… Kaun kehta hai tum zyada bolti ho? Main toh tmhari har baat sunne ke liye hamesha taiyaar hoon. Mujhe kabhi pareshani nahi hogi. Bas yunhi muskura diya karo baatein karte hue. Tab mere liye puri duniya sirf tum hi hogi.",
+"Main tmhara intezaar karne ke liye taiyaar hoon. Tum mujhse pyaar karti ho — yeh kehne ki zarurat nahi. Bas apna haq jatate rehna. Chahe sab tumhare khilaaf ho jaayein, Hum tumhare hi the… tumhare hi rahenge. Aur hamesha tumhara saath dete rahenge.",
+"Hamare rishte ki rassi shayad thodi kamzor ho rahi hai, Magar main use abhi bhi mazbooti se pakde baitha hoon. Tum bas mera haath thaam lo, Aur is rishte ko aur mazboot bana do. Jis upar wale ne kabhi do ajnabi ko milaya tha, Ab kiski himmat hai jo hume alag kar sake?"
 ];
 
 let currentPage = 0;
@@ -69,7 +83,7 @@ const pages = document.querySelectorAll(".page");
 const music = document.getElementById("bgMusic");
 
 // Typewriter effect
-function typeWriter(text, element, speed=40){
+function typeWriter(text, element, speed=30){
     let i = 0;
     element.innerHTML = "";
     function type(){
@@ -82,9 +96,9 @@ function typeWriter(text, element, speed=40){
     type();
 }
 
-// Next page
+// Next Page
 function nextPage(){
-    if(currentPage < pages.length-1){
+    if(currentPage < pages.length - 1){
         pages[currentPage].classList.remove("active");
         currentPage++;
         const p = pages[currentPage].querySelector("p");
@@ -93,9 +107,10 @@ function nextPage(){
     }
 }
 
-// Start button
+// Start Button
 document.getElementById("startBtn").addEventListener("click", ()=>{
-    music.play().catch(()=>alert("Click to start the music!"));
+    music.muted = false;   // Unmute
+    music.play().catch(()=>alert("Click again to start the music!"));
     nextPage();
 });
 
