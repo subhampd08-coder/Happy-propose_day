@@ -119,6 +119,7 @@ button:hover{
 <!-- Background Music -->
 <audio id="bgMusic" loop>
     <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
 </audio>
 
 <div class="hearts" id="hearts"></div>
@@ -210,7 +211,7 @@ Ab kiski himmat hai jo hume alag kar sake?
 
 <!-- Final Page -->
 <div class="page">
-<h1>Subham ❤️ [Ladduuuu]</h1>
+<h1>Budhu ❤️ Ladduuuu</h1>
 <p>
 Shayad maine seedha "I Love You" nahi bola…<br><br>
 Par har lafz mein tum thi,<br>
@@ -236,7 +237,6 @@ function nextPage(){
 
 function startExperience(){
     const music = document.getElementById("bgMusic");
-    // Ensure user interaction triggers music
     music.play().then(()=>{
         nextPage();
     }).catch(()=>{
