@@ -125,19 +125,27 @@ button:hover{
 
 <div class="card">
 
-<!-- Page 1 -->
+<!-- Page 1: Start Page -->
 <div class="page active">
 <h1>Happy Propose Day ❤️</h1>
+<p>
+Click below to start your special surprise… ❤️
+</p>
+<button onclick="startExperience()">Start ❤️</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page">
 <p>
 Tmse milna meri kismat ho skti hai,<br>
 Tmse mohabbat ho jana mere liye sahi waqt ho skta hai,<br>
 Tmhara mere saath rehna meri takat hai,<br>
 Aur tmhara hasta hua chehra dekhna meri aadat hai.
 </p>
-<button onclick="startExperience()">Next ❤️</button>
+<button onclick="nextPage()">Next ❤️</button>
 </div>
 
-<!-- Page 2 -->
+<!-- Page 3 -->
 <div class="page">
 <p>
 Aajkal tmse baatein thodi kam ho gayi hain,<br>
@@ -149,7 +157,7 @@ Jo aaj bhi deewani hai sirf tmhari muskurahat ke pichhe.
 <button onclick="nextPage()">Next ❤️</button>
 </div>
 
-<!-- Page 3 -->
+<!-- Page 4 -->
 <div class="page">
 <p>
 Waqt nahi mil pata milne ko, thik hai…<br>
@@ -161,7 +169,7 @@ Magar kabhi ek dusre ka haath chhoda nahi.
 <button onclick="nextPage()">Next ❤️</button>
 </div>
 
-<!-- Page 4 -->
+<!-- Page 5 -->
 <div class="page">
 <p>
 Kitni pyaari lagti ho tum…<br>
@@ -174,7 +182,7 @@ Tab mere liye puri duniya sirf tum hi hogi.
 <button onclick="nextPage()">Next ❤️</button>
 </div>
 
-<!-- Page 5 -->
+<!-- Page 6 -->
 <div class="page">
 <p>
 Main tmhara intezaar karne ke liye taiyaar hoon,<br>
@@ -187,7 +195,7 @@ Aur hamesha tumhara saath dete rahenge.
 <button onclick="nextPage()">Next ❤️</button>
 </div>
 
-<!-- Page 6 -->
+<!-- Page 7 -->
 <div class="page">
 <p>
 Hamare rishte ki rassi shayad thodi kamzor ho rahi hai,<br>
@@ -200,7 +208,7 @@ Ab kiski himmat hai jo hume alag kar sake?
 <button onclick="nextPage()">Final ❤️</button>
 </div>
 
-<!-- Final -->
+<!-- Final Page -->
 <div class="page">
 <h1>Subham ❤️ [Ladduuuu]</h1>
 <p>
@@ -226,13 +234,15 @@ function nextPage(){
     }
 }
 
-// Start experience + music
 function startExperience(){
-    document.getElementById("bgMusic").play();
+    const music = document.getElementById("bgMusic");
+    music.play().catch(()=>{ 
+        alert("Click anywhere on the page to start music"); 
+    });
     nextPage();
 }
 
-// Hearts animation
+// Floating hearts
 function createHearts(){
     const hearts = document.getElementById("hearts");
     for(let i=0;i<30;i++){
@@ -249,4 +259,3 @@ createHearts();
 
 </body>
 </html>
-
